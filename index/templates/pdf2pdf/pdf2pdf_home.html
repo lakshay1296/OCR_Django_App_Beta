@@ -1,0 +1,48 @@
+<html>
+<head>
+  <title>PDF to PDF Converter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>PDF to PDF Converter</h1>
+    <div class="input">
+
+        <form action="{% url 'index:pdf2pdf_file_path' %}" method="post">
+            {% csrf_token %}
+            <label>File Path:</label>
+            <input type="text" name="fname" value="{{ file_path }}"><br>
+
+            <button type="submit" value="Upload">Upload</button>
+        </form>
+    </div>
+
+    {% if error == "Enter Path!" %}
+    <div class="alert alert-warning" >
+        <strong>Warning!</strong> Please Enter Path.
+    </div>
+
+    {% elif error == "Not Valid Path" %}
+    <div class="alert alert-warning" >
+        <strong>Warning!</strong> Please enter a valid path.
+    </div>
+
+    {% elif error == "Fully Executed" %}
+    <div class="alert alert-success">
+        <strong>Success!</strong> Files has successfully been OCR'd.
+    </div>
+
+    {% endif %}
+
+    <form action="{% url 'index:index' %}" method="GET">
+        <button type="submit" value="PDF to PNG Converter">Home</button>
+    </form>
+
+</div>
+</body>
+
+</html>

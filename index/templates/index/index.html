@@ -1,0 +1,38 @@
+<html>
+<head>
+        <meta charset = "UTF-8">
+        <title>Home Page</title>
+        {% load static %}
+        <link rel = "stylesheet" type = "text/css" href = "{% static 'css/split_screen.css' %}" />
+</head>
+
+<body>
+
+    <div class="split top">
+        <div id="upper_half">
+            
+            <div class="split top left">
+                <form action="{% url 'index:home' %}" method="GET">
+                        <button type="submit" value="OCR SCANNER">OCR SCANNER</button>
+                </form>
+            </div>
+
+            <div class="split top right">
+                <form action="{% url 'index:pdf_home' %}" method="GET">
+                    <button type="submit" value="PDF to PNG Converter">PDF to PNG Converter</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="split down">
+        <div class="centered" id="lower_half">
+            <form action="{% url 'index:pdf2pdf_home' %}" method="GET">
+                        <button type="submit" value="PDF2PDF">PDF to PDF</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

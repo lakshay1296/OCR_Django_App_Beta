@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8fa6b524-cc6d-439e-8bd6-2299b745d56a" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>submi</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Lakshay Saini" />
+      </list>
+    </option>
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/OCR_Django_App/index/models.py" />
+        <option value="$PROJECT_DIR$/OCR_Django_App/OCR_Django_App/urls.py" />
+        <option value="$PROJECT_DIR$/OCR_Django_App/OCR_Django_App/settings.py" />
+        <option value="$PROJECT_DIR$/OCR_Django_App/index/static/css/split_screen.css" />
+        <option value="$PROJECT_DIR$/venv/Lib/site-packages/pypdfocr/pypdfocr_pdf.py" />
+        <option value="$PROJECT_DIR$/venv/Lib/site-packages/pypdfocr/pypdfocr_tesseract.py" />
+        <option value="$PROJECT_DIR$/OCR_Django_App/index/source/utils.py" />
+        <option value="$PROJECT_DIR$/OCR_Django_App/index/static/js/anime.js" />
+        <option value="$PROJECT_DIR$/OCR_Django_App/index/static/css/style.css" />
+        <option value="$PROJECT_DIR$/OCR_Django_App/index/static/js/effects.js" />
+        <option value="$PROJECT_DIR$/testing.py" />
+        <option value="$PROJECT_DIR$/OCR_Django_App/index/urls.py" />
+        <option value="$PROJECT_DIR$/OCR_Django_App/index/templates/index/index.html" />
+        <option value="$PROJECT_DIR$/OCR_Django_App/index/views.py" />
+        <option value="$PROJECT_DIR$/OCR_Django_App/index/templates/pdf_home/pdf_home.html" />
+        <option value="$PROJECT_DIR$/OCR_Django_App/index/templates/pdf2pdf/pdf2pdf_home.html" />
+        <option value="$PROJECT_DIR$/OCR_Django_App/index/templates/home/home.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="793" />
+    <option name="width" value="814" />
+    <option name="height" value="867" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="OCR_Django_App_Beta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OCR_Django_App_Beta" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS-1\OCR_Django_App" />
+      <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS\OCR_Django_App\index" />
+      <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS\OCR_Django_App\index\static" />
+      <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS\OCR_Django_App\index" />
+      <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS\OCR_Django_App\index\templates\index" />
+      <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS\OCR_Django_App\index\templates\css" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.views">
+    <configuration name="pypdfocr_pdf" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Django-OCR-VCS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/Lib/site-packages/pypdfocr" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/Lib/site-packages/pypdfocr/pypdfocr_pdf.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="testing" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Django-OCR-VCS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Django-OCR-VCS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/OCR_Django_App/index" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/OCR_Django_App/index/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.views" />
+        <item itemvalue="Python.testing" />
+        <item itemvalue="Python.pypdfocr_pdf" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8fa6b524-cc6d-439e-8bd6-2299b745d56a" name="Default Changelist" comment="" />
+      <created>1553686259578</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553686259578</updated>
+    </task>
+    <task id="LOCAL-00001" summary="First Commit">
+      <created>1553689266154</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1553689266154</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First Commit">
+      <created>1553689921681</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1553689921681</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Made Changes:&#10;- PDF o PNG Path.&#10;- Alert Dialogues.">
+      <created>1553780977547</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1553780977547</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Made Changes:&#10;- Minor changes to templates&#10;- Includes program for Merging PNG's">
+      <created>1553870898312</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1553870898312</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Made Changes:&#10;- Reverted back to normal html template because it was causing problems with the functionality.&#10;- Added module for converting PDF to searchable PDF.">
+      <created>1554375008305</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1554375008305</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Made Changes:&#10;- Added a home button">
+      <created>1554376533679</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1554376533679</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Made Changes:&#10;- Updated Folder Structure">
+      <created>1554377685658</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1554377685658</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="793" y="0" width="814" height="867" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38530928" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3257066" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33106267" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39918256" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4974227" weight="0.3270525" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.34604904" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5025773" side_tool="true" weight="0.32833788" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32970026" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10392902" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3257066" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33106267" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39918256" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4974227" weight="0.3270525" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3230148" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5025773" side_tool="true" weight="0.32833788" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32970026" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Commit" />
+    <MESSAGE value="Made Changes:&#10;- PDF o PNG Path.&#10;- Alert Dialogues." />
+    <MESSAGE value="Made Changes:&#10;- Minor changes to templates&#10;- Includes program for Merging PNG's" />
+    <MESSAGE value="Made Changes:&#10;- Reverted back to normal html template because it was causing problems with the functionality.&#10;- Added module for converting PDF to searchable PDF." />
+    <MESSAGE value="Made Changes:&#10;- Added a home button" />
+    <MESSAGE value="Made Changes:&#10;- Updated Folder Structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made Changes:&#10;- Updated Folder Structure" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/apps.py" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-341250462/__builtin__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="4416" column="8" selection-start-line="4416" selection-start-column="8" selection-end-line="4416" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/tests.py" />
+    <entry file="file://$PROJECT_DIR$/OCR_Django_App/OCR_Django_App/settings.py" />
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/pypdfocr/pypdfocr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4896" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/pypdfocr/pypdfocr_pdf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="139" column="52" lean-forward="true" selection-start-line="139" selection-start-column="52" selection-end-line="139" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/pypdfocr/pypdfocr_tesseract.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="162" column="27" selection-start-line="162" selection-start-column="27" selection-end-line="162" selection-end-column="27" />
+          <folding>
+            <element signature="e#2548#2581#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OCR_Django_App/OCR_Django_App/urls.py" />
+    <entry file="file://$PROJECT_DIR$/Trifacta.png" />
+    <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/static/js/anime.js" />
+    <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/static/js/effects.js" />
+    <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/pypdfocr.py" />
+    <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/static/css/style.css" />
+    <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/admin.py" />
+    <entry file="file://$PROJECT_DIR$/testing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="1740" selection-start-line="1740" selection-end-line="1740" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/source/utils.py" />
+    <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/templates/home/home1.html" />
+    <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/FileName.py" />
+    <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/static/css/split_screen.css" />
+    <entry file="file://$PROJECT_DIR$/OCR_Django_App/pypdfocr_watcher.py" />
+    <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/urls.py" />
+    <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/views.py" />
+    <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/templates/index/index.html" />
+    <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/templates/pdf_home/pdf_home.html" />
+    <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/templates/pdf2pdf/pdf2pdf_home.html" />
+    <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/templates/home/home.html" />
+  </component>
+</project>

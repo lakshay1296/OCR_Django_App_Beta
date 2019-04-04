@@ -1,0 +1,123 @@
+<!--
+<head>
+    <title>Optical Character Recognition</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    {% load static %}
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'css/style.css' %}" />
+</head>
+<body>
+<div class="page">
+    <div class="container">
+        <div class="left">
+            <div class="login">OCR Scanner</div>
+            <div class="eula">This is the tool for performing OCR on Images.</div>
+        </div>
+        <div class="right">
+            <svg viewBox="0 0 320 300">
+                <defs>
+                    <linearGradient
+                            inkscape:collect="always"
+                            id="linearGradient"
+                            x1="13"
+                            y1="193.49992"
+                            x2="307"
+                            y2="193.49992"
+                            gradientUnits="userSpaceOnUse">
+                        <stop
+                                style="stop-color:#ff00ff;"
+                                offset="0"
+                                id="stop876" />
+                        <stop
+                                style="stop-color:#ff0000;"
+                                offset="1"
+                                id="stop878" />
+                    </linearGradient>
+                </defs>
+                <path d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
+            </svg>
+            <div class="form">
+                <form action="{% url 'index:ocr_file_path' %}" method="post">
+                    {% csrf_token %}
+                    <label for="text">File Path</label>
+                    <input type="text" id="fname" value="{{ file_path }}"><br>
+                    <label for="text"></label>
+                    <label for="text"></label>
+
+                    <input type="submit" id = "submit" value="Upload">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {% if error == "Enter Path!" %}
+    <div class="alert alert-warning" >
+        <strong>Warning!</strong> Please Enter Path.
+    </div>
+
+    {% elif error == "Not Valid Path" %}
+    <div class="alert alert-warning" >
+        <strong>Warning!</strong> Please enter a valid path.
+    </div>
+
+    {% elif error == "Fully Executed" %}
+    <div class="alert alert-success">
+        <strong>Success!</strong> Files has successfully been OCR'd.
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>-->
+
+<html>
+<head>
+  <title>Optical Character Recognition</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Optical Character Recognition</h1>
+    <div class="input">
+
+        <form action="{% url 'index:ocr_file_path' %}" method="post">
+            {% csrf_token %}
+            <label>File Path:</label>
+            <input type="text" name="fname" value="{{ file_path }}"><br>
+
+            <button type="submit" value="Upload">Upload</button>
+        </form>
+    </div>
+
+    {% if error == "Enter Path!" %}
+    <div class="alert alert-warning" >
+        <strong>Warning!</strong> Please Enter Path.
+    </div>
+
+    {% elif error == "Not Valid Path" %}
+    <div class="alert alert-warning" >
+        <strong>Warning!</strong> Please enter a valid path.
+    </div>
+
+    {% elif error == "Fully Executed" %}
+    <div class="alert alert-success">
+        <strong>Success!</strong> Files has successfully been OCR'd.
+    </div>
+
+    {% endif %}
+    <form action="{% url 'index:index' %}" method="GET">
+        <button type="submit" value="PDF to PNG Converter">Home</button>
+    </form>
+
+</div>
+</body>
+
+</html>
