@@ -306,3 +306,20 @@ def pdf_exception_handling(file_path):
             output = e
 
     return output, emptyField
+
+
+def proofread(request):
+    file_name = FileName.objects.all()
+
+    data = UT.tesseract_data("D:\NonOCR\PNG\\0681Q00000FqEFYQA3.pdf\\0681Q00000FqEFYQA3.pdf-page2.png")
+
+    image = data[0]
+    image_data = data[1]
+
+    n_boxes = len(image_data['level'])
+
+    context = {'file_name': file_name,
+               'image': image,
+               'image_data': image_data,
+               'n_boxes': n_boxes}
+    return render(request, "proofread/proofread.html", context)

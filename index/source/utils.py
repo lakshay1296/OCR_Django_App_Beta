@@ -1,8 +1,8 @@
 import os
 
 from pdf2image import convert_from_path
-import re
 import  numpy as np
+from pytesseract import Output
 
 # For importing PyTesseract
 try:
@@ -125,3 +125,24 @@ def pdf_to_image(file_path):
     #merge_pdf(create_folder)
 
     return create_folder
+
+'''
+    Function for creating tooltip on image
+'''
+
+def tesseract_data(path):
+    print(path)
+
+    # Image
+    img = Image.open(path)
+
+    image_formats = ['.png', '.jpg', '.jpeg']
+
+    for format in image_formats:
+        if format in path:
+            # Simple image to string
+            image_data = pytesseract.image_to_data(img, output_type=Output.DICT)
+        else:
+            image_data = "File not supported."
+
+        return img, image_data

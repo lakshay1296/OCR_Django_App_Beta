@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8fa6b524-cc6d-439e-8bd6-2299b745d56a" name="Default Changelist" comment="" />
+    <list default="true" id="8fa6b524-cc6d-439e-8bd6-2299b745d56a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/index/templates/proofread/proofread.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/source/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/index/source/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/index/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/index/views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,7 +15,62 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="323" column="33" selection-start-line="323" selection-start-column="33" selection-end-line="323" selection-end-column="33" />
+              <folding>
+                <element signature="e#573#711#0" />
+                <element signature="e#754#883#0" />
+                <element signature="e#1249#2966#0" />
+                <element signature="e#3022#3157#0" />
+                <element signature="e#3235#4326#0" />
+                <element signature="e#4635#5192#0" />
+                <element signature="e#5296#7438#0" />
+                <element signature="e#7533#8093#0" />
+                <element signature="e#8293#8947#0" />
+                <element signature="e#8992#9543#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index/source/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="145" column="46" selection-start-line="145" selection-start-column="46" selection-end-line="145" selection-end-column="46" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index/templates/home/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-289">
+              <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#3040#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index/templates/proofread/proofread.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -54,6 +115,10 @@
         <option value="$PROJECT_DIR$/OCR_Django_App/index/templates/pdf_home/pdf_home.html" />
         <option value="$PROJECT_DIR$/OCR_Django_App/index/templates/pdf2pdf/pdf2pdf_home.html" />
         <option value="$PROJECT_DIR$/OCR_Django_App/index/templates/home/home.html" />
+        <option value="$PROJECT_DIR$/index/urls.py" />
+        <option value="$PROJECT_DIR$/index/source/utils.py" />
+        <option value="$PROJECT_DIR$/index/views.py" />
+        <option value="$PROJECT_DIR$/index/templates/proofread/proofread.html" />
       </list>
     </option>
   </component>
@@ -76,6 +141,17 @@
             <path>
               <item name="OCR_Django_App_Beta" type="b2602c69:ProjectViewProjectNode" />
               <item name="OCR_Django_App_Beta" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OCR_Django_App_Beta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OCR_Django_App_Beta" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OCR_Django_App_Beta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OCR_Django_App_Beta" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -251,8 +327,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="793" y="0" width="814" height="867" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38530928" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25902063" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -263,8 +340,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4974227" weight="0.3270525" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.34604904" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5025773" side_tool="true" weight="0.32833788" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49809885" visible="true" weight="0.35013625" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50190115" side_tool="true" weight="0.34185734" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32970026" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -375,5 +452,64 @@
     <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/templates/pdf_home/pdf_home.html" />
     <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/templates/pdf2pdf/pdf2pdf_home.html" />
     <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/templates/home/home.html" />
+    <entry file="file://$PROJECT_DIR$/index/templates/index/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="32" column="59" lean-forward="true" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/templates/home/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-289">
+          <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#3040#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/source/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="145" column="46" selection-start-line="145" selection-start-column="46" selection-end-line="145" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="323" column="33" selection-start-line="323" selection-start-column="33" selection-end-line="323" selection-end-column="33" />
+          <folding>
+            <element signature="e#573#711#0" />
+            <element signature="e#754#883#0" />
+            <element signature="e#1249#2966#0" />
+            <element signature="e#3022#3157#0" />
+            <element signature="e#3235#4326#0" />
+            <element signature="e#4635#5192#0" />
+            <element signature="e#5296#7438#0" />
+            <element signature="e#7533#8093#0" />
+            <element signature="e#8293#8947#0" />
+            <element signature="e#8992#9543#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/templates/proofread/proofread.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

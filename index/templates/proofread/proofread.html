@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proofread</title>
+</head>
+<body>
+
+{% if image_data %}
+{% for keys, values in image_data.items %}
+<h4>{{ values }}</h4>
+{% endfor %}
+{% endif %}
+
+</body>
+</html>
