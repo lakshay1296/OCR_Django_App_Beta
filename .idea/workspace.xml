@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fa6b524-cc6d-439e-8bd6-2299b745d56a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/index/templates/proofread/proofread.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/static/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/static/images/0681Q00000FqEFYQA3.pdf-page2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index/source/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/index/source/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/index/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/templates/proofread/proofread.html" beforeDir="false" afterPath="$PROJECT_DIR$/index/templates/proofread/proofread.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/index/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,10 +18,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index/source/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="147" column="19" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="323" column="33" selection-start-line="323" selection-start-column="33" selection-end-line="323" selection-end-column="33" />
+            <state relative-caret-position="-38">
+              <caret line="313" column="18" selection-start-line="313" selection-start-column="18" selection-end-line="313" selection-end-column="18" />
               <folding>
                 <element signature="e#573#711#0" />
                 <element signature="e#754#883#0" />
@@ -37,35 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index/source/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="145" column="46" selection-start-line="145" selection-start-column="46" selection-end-line="145" selection-end-column="46" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index/templates/home/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-289">
-              <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#3040#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index/templates/proofread/proofread.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+              <caret line="10" column="64" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -75,14 +64,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>submi</find>
+      <find>favicon.ico</find>
+      <find>img</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -93,7 +84,6 @@
     </option>
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -116,14 +106,17 @@
         <option value="$PROJECT_DIR$/OCR_Django_App/index/templates/pdf2pdf/pdf2pdf_home.html" />
         <option value="$PROJECT_DIR$/OCR_Django_App/index/templates/home/home.html" />
         <option value="$PROJECT_DIR$/index/urls.py" />
-        <option value="$PROJECT_DIR$/index/source/utils.py" />
+        <option value="$PROJECT_DIR$/index/templatetags/image_data.py" />
+        <option value="$PROJECT_DIR$/OCR_Django_App/settings.py" />
+        <option value="$PROJECT_DIR$/index/static/templatetags/image_data1.py" />
         <option value="$PROJECT_DIR$/index/views.py" />
+        <option value="$PROJECT_DIR$/index/source/utils.py" />
         <option value="$PROJECT_DIR$/index/templates/proofread/proofread.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="793" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
     <option name="width" value="814" />
     <option name="height" value="867" />
   </component>
@@ -151,7 +144,12 @@
               <item name="OCR_Django_App_Beta" type="b2602c69:ProjectViewProjectNode" />
               <item name="OCR_Django_App_Beta" type="462c0819:PsiDirectoryNode" />
               <item name="index" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OCR_Django_App_Beta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OCR_Django_App_Beta" type="462c0819:PsiDirectoryNode" />
+              <item name="OCR_Django_App" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -162,20 +160,22 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Tesseract" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS-1\OCR_Django_App" />
-      <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS\OCR_Django_App\index" />
-      <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lakshay.s\PycharmProjects\OCR_Django_App_Beta\index\static" />
+      <recent name="C:\Users\Lakshay.s\PycharmProjects\OCR_Django_App_Beta\index" />
       <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS\OCR_Django_App\index\static" />
       <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS\OCR_Django_App\index" />
       <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS\OCR_Django_App\index\templates\index" />
-      <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS\OCR_Django_App\index\templates\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lakshay.s\PycharmProjects\OCR_Django_App_Beta\index\static\images" />
+      <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS-1\OCR_Django_App" />
+      <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS\OCR_Django_App\index" />
+      <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -322,14 +322,20 @@
       <option name="project" value="LOCAL" />
       <updated>1554377685658</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Made Changes:&#10;- Added Proofreading Template (logic not working)">
+      <created>1555078428898</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1555078428899</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="793" y="0" width="814" height="867" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25902063" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12737642" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -340,7 +346,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4974227" weight="0.3270525" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49809885" visible="true" weight="0.35013625" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49809885" visible="true" weight="0.34589502" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50190115" side_tool="true" weight="0.34185734" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32970026" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -374,7 +380,8 @@
     <MESSAGE value="Made Changes:&#10;- Reverted back to normal html template because it was causing problems with the functionality.&#10;- Added module for converting PDF to searchable PDF." />
     <MESSAGE value="Made Changes:&#10;- Added a home button" />
     <MESSAGE value="Made Changes:&#10;- Updated Folder Structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made Changes:&#10;- Updated Folder Structure" />
+    <MESSAGE value="Made Changes:&#10;- Added Proofreading Template (logic not working)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made Changes:&#10;- Added Proofreading Template (logic not working)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -452,9 +459,6 @@
     <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/templates/pdf_home/pdf_home.html" />
     <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/templates/pdf2pdf/pdf2pdf_home.html" />
     <entry file="file://$PROJECT_DIR$/OCR_Django_App/index/templates/home/home.html" />
-    <entry file="file://$PROJECT_DIR$/index/templates/index/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/index/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -465,30 +469,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/index/templates/home/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+        <state relative-caret-position="187">
+          <caret line="100" column="38" lean-forward="true" selection-start-line="100" selection-start-column="38" selection-end-line="100" selection-end-column="38" />
           <folding>
             <element signature="e#0#3040#0" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index/templates/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="98" lean-forward="true" selection-start-line="5" selection-start-column="98" selection-end-line="5" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/static/templatetags/image_data1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index/source/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="145" column="46" selection-start-line="145" selection-start-column="46" selection-end-line="145" selection-end-column="46" />
+        <state relative-caret-position="327">
+          <caret line="147" column="19" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/OCR_Django_App/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="323" column="33" selection-start-line="323" selection-start-column="33" selection-end-line="323" selection-end-column="33" />
+        <state relative-caret-position="-38">
+          <caret line="313" column="18" selection-start-line="313" selection-start-column="18" selection-end-line="313" selection-end-column="18" />
           <folding>
             <element signature="e#573#711#0" />
             <element signature="e#754#883#0" />
@@ -507,7 +538,7 @@
     <entry file="file://$PROJECT_DIR$/index/templates/proofread/proofread.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <caret line="10" column="64" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
         </state>
       </provider>
     </entry>

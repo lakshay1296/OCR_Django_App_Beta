@@ -316,10 +316,21 @@ def proofread(request):
     image = data[0]
     image_data = data[1]
 
+    # Initializing empty lists
+    X = []
+    keysList = ["left", "top", "conf", "text"]
+
+    for key in keysList:
+        X.append(image_data[key])
+
+    # Result of transpose matrix
+    result = [[X[j][i] for j in range(len(X))] for i in range(1, len(X[0]))]
+
     n_boxes = len(image_data['level'])
 
     context = {'file_name': file_name,
+               'result': result,
+               'range': range(n_boxes),
                'image': image,
-               'image_data': image_data,
-               'n_boxes': n_boxes}
+               }
     return render(request, "proofread/proofread.html", context)

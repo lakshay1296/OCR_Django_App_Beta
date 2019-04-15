@@ -145,4 +145,4 @@ def tesseract_data(path):
         else:
             image_data = "File not supported."
 
-        return img, image_data
+        return path, image_data

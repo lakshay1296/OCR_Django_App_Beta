@@ -5,12 +5,53 @@
     <title>Proofread</title>
 </head>
 <body>
+<div class="tooltip">
+<div id="map">
+    {% load static %}
+	<img src="{% static 'images/0681Q00000FqEFYQA3.pdf-page2.png' %}" height="3300" width="2550"
+	alt="Locations Map" usemap="#locations" id="locations-map" /> <map name="locations" id="locations">
 
-{% if image_data %}
-{% for keys, values in image_data.items %}
-<h4>{{ values }}</h4>
+<!-- LEFT, TOP, WIDTH, HEIGHT -->
+
+{% for i in result %}
+<area shape="circle" class="tooltip" alt="Proofread tag" coords="{{ i.0 }},{{ i.1 }},20" href="" title="{{ i.3 }} CONF={{ i.2 }}" />
 {% endfor %}
-{% endif %}
+</map></div>
+ </div>
+<style>
 
+/* .scroll_inter{
+	overflow: auto;
+} */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+ </style>
 </body>
 </html>
