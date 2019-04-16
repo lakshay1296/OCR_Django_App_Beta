@@ -18,16 +18,15 @@
   .top {
     top: 0;
     width: 50%;
-    height: 70%;
+    height: 50%;
     background-color: rgba(245, 245, 245, 0.904);
   }
 
   .down {
     bottom: 0;
-    left: 0%;
-    height: 30%;
-    background-color: #42adf4;
-    -webkit-text-fill-color: rgba(245, 245, 245, 0.904);
+    height: 50%;
+    width: 50%;
+    background-color: rgba(245, 245, 245, 0.904);
   }
 
   .left {

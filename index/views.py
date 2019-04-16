@@ -326,11 +326,21 @@ def proofread(request):
     # Result of transpose matrix
     result = [[X[j][i] for j in range(len(X))] for i in range(1, len(X[0]))]
 
-    n_boxes = len(image_data['level'])
+    newResult = []
+
+    # For removing list elements with confidence score '-1', blanks and spaces.
+    for i in result:
+        if (i[2] == "-1") or (i[3] == "") or (i[3] == " "):
+            pass
+        else:
+            newResult.append(i)
+
+    # For increasing the top value by 20.
+    for i in newResult:
+        i[1] = (int(i[1]) + 20)
 
     context = {'file_name': file_name,
-               'result': result,
-               'range': range(n_boxes),
+               'result': newResult,
                'image': image,
                }
     return render(request, "proofread/proofread.html", context)

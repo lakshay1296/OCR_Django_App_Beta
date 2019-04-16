@@ -12,27 +12,40 @@
         <div id="upper_half">
             
             <div class="split top left">
-                <form action="{% url 'index:home' %}" method="GET">
+                <div class="centered" id="upper_half_left">
+                    <form action="{% url 'index:home' %}" method="GET">
                         <button type="submit" value="OCR SCANNER">OCR SCANNER</button>
-                </form>
+                    </form>
+                </div>
             </div>
 
             <div class="split top right">
-                <form action="{% url 'index:pdf_home' %}" method="GET">
+                <div class="centered" id="upper_half_right">
+                    <form action="{% url 'index:pdf_home' %}" method="GET">
                     <button type="submit" value="PDF to PNG Converter">PDF to PNG Converter</button>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="split down">
-        <div class="centered" id="lower_half">
-            <form action="{% url 'index:pdf2pdf_home' %}" method="GET">
-                        <button type="submit" value="PDF2PDF">PDF to PDF</button>
-            </form>
+        <div class="split down left">
+            <div class="centered" id="lower_half_left">
+                <form action="{% url 'index:pdf2pdf_home' %}" method="GET">
+                            <button type="submit" value="PDF2PDF">PDF to PDF</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="split down right">
+            <div class="centered" id="lower_half_right">
+                <form action="{% url 'index:proofread' %}" method="GET">
+                            <button type="submit" value="Proof">Proofreading</button>
+                </form>
+            </div>
         </div>
     </div>
-
 </body>
 
 </html>

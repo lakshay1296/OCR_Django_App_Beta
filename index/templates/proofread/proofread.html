@@ -14,15 +14,11 @@
 <!-- LEFT, TOP, WIDTH, HEIGHT -->
 
 {% for i in result %}
-<area shape="circle" class="tooltip" alt="Proofread tag" coords="{{ i.0 }},{{ i.1 }},20" href="" title="{{ i.3 }} CONF={{ i.2 }}" />
+<area shape="circle" class="tooltip" alt="Proofread tag" coords="{{ i.0 }},{{ i.1 }},20" href="" title="{{ i.3 }}, CONF={{ i.2 }}" />
 {% endfor %}
 </map></div>
  </div>
 <style>
-
-/* .scroll_inter{
-	overflow: auto;
-} */
 
 .tooltip {
   position: relative;
