@@ -311,7 +311,7 @@ def pdf_exception_handling(file_path):
 def proofread(request):
     file_name = FileName.objects.all()
 
-    data = UT.tesseract_data("D:\NonOCR\PNG\\0681Q00000FqEFYQA3.pdf\\0681Q00000FqEFYQA3.pdf-page2.png")
+    data = UT.tesseract_data("D:\NonOCR\PNG\\0681Q00000FqEFYQA3.pdf\\0681Q00000FqEFYQA3.png")
 
     image = data[0]
     image_data = data[1]

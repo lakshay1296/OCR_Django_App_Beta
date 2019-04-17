@@ -7,7 +7,6 @@ urlpatterns = [
     # url: /index1/
     url(r'^$', views.index, name='index'),
 
-
     # url: /index1/index1/
     url(r'^home/$', views.home, name='home'),
 

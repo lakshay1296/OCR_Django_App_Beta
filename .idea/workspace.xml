@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fa6b524-cc6d-439e-8bd6-2299b745d56a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/index/static/images/0681Q00000FqEFYQA3.pdf-page0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/static/images/0681Q00000FqEFYQA3.pdf-page1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/static/images/0681Q00000FqEFYQA3.pdf-page3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/static/images/0681Q00000FqEFYQA3.pdf-page4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/static/images/0681Q00000FqEFYQA3.pdf-page5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/static/images/0681Q00000FqEFYQA3.pdf-page6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/static/images/0681Q00000FqEFYQA3.pdf-page7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/static/images/0681Q00000FqEFYQA3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index/static/css/split_screen.css" beforeDir="false" afterPath="$PROJECT_DIR$/index/static/css/split_screen.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index/templates/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index/templates/index/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/templates/proofread/proofread.html" beforeDir="false" afterPath="$PROJECT_DIR$/index/templates/proofread/proofread.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/index/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/index/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +25,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index/templates/index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+            <state relative-caret-position="340">
+              <caret line="55" column="32" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index/static/css/split_screen.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="121" column="12" selection-start-line="121" selection-start-column="12" selection-end-line="121" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index/source/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="97" column="28" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#464#1362#0" />
+                <element signature="e#1536#2221#0" />
+                <element signature="e#2331#2780#0" />
+                <element signature="e#2864#3800#0" />
+                <element signature="e#3884#4255#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -26,11 +63,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="316" column="24" lean-forward="true" selection-start-line="316" selection-start-column="24" selection-end-line="316" selection-end-column="24" />
+            <state relative-caret-position="336">
+              <caret line="310" column="23" selection-start-line="310" selection-start-column="23" selection-end-line="310" selection-end-column="23" />
               <folding>
                 <element signature="e#573#711#0" />
                 <element signature="e#754#883#0" />
+                <element signature="e#1044#1171#0" />
                 <element signature="e#1249#2966#0" />
                 <element signature="e#3022#3157#0" />
                 <element signature="e#3235#4326#0" />
@@ -39,16 +77,29 @@
                 <element signature="e#7533#8093#0" />
                 <element signature="e#8293#8947#0" />
                 <element signature="e#8992#9543#0" />
+                <element signature="e#9574#10552#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index/templates/proofread/proofread.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="126" selection-start-line="16" selection-start-column="126" selection-end-line="16" selection-end-column="126" />
+            <state relative-caret-position="306">
+              <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -99,13 +150,13 @@
         <option value="$PROJECT_DIR$/OCR_Django_App/index/templates/pdf_home/pdf_home.html" />
         <option value="$PROJECT_DIR$/OCR_Django_App/index/templates/pdf2pdf/pdf2pdf_home.html" />
         <option value="$PROJECT_DIR$/OCR_Django_App/index/templates/home/home.html" />
-        <option value="$PROJECT_DIR$/index/urls.py" />
         <option value="$PROJECT_DIR$/index/templatetags/image_data.py" />
         <option value="$PROJECT_DIR$/OCR_Django_App/settings.py" />
         <option value="$PROJECT_DIR$/index/static/templatetags/image_data1.py" />
+        <option value="$PROJECT_DIR$/index/urls.py" />
         <option value="$PROJECT_DIR$/index/source/utils.py" />
-        <option value="$PROJECT_DIR$/index/templates/proofread/proofread.html" />
         <option value="$PROJECT_DIR$/index/views.py" />
+        <option value="$PROJECT_DIR$/index/templates/proofread/proofread.html" />
         <option value="$PROJECT_DIR$/index/static/css/split_screen.css" />
         <option value="$PROJECT_DIR$/index/templates/index/index.html" />
       </list>
@@ -149,11 +200,6 @@
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="OCR_Django_App_Beta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OCR_Django_App_Beta" type="462c0819:PsiDirectoryNode" />
-              <item name="OCR_Django_App" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -163,22 +209,22 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Tesseract" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lakshay.s\PycharmProjects\OCR_Django_App_Beta\index\static\images" />
+      <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS-1\OCR_Django_App" />
+      <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS\OCR_Django_App\index" />
+      <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Lakshay.s\PycharmProjects\OCR_Django_App_Beta\index\static" />
       <recent name="C:\Users\Lakshay.s\PycharmProjects\OCR_Django_App_Beta\index" />
       <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS\OCR_Django_App\index\static" />
       <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS\OCR_Django_App\index" />
       <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS\OCR_Django_App\index\templates\index" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Lakshay.s\PycharmProjects\OCR_Django_App_Beta\index\static\images" />
-      <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS-1\OCR_Django_App" />
-      <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS\OCR_Django_App\index" />
-      <recent name="C:\Users\Lakshay.s\PycharmProjects\Django-OCR-VCS" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -346,14 +392,20 @@
       <option name="project" value="LOCAL" />
       <updated>1555395047818</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Made Changes:&#10;- Added Proofreading Template (logic working).&#10;- Created tooltips in image for proofreading.2">
+      <created>1555402421060</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1555402421061</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.12737642" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17363751" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -364,7 +416,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4974227" weight="0.3270525" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49809885" weight="0.34589502" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49809885" visible="true" weight="0.34589502" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50190115" side_tool="true" weight="0.34185734" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32970026" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -400,7 +452,8 @@
     <MESSAGE value="Made Changes:&#10;- Updated Folder Structure" />
     <MESSAGE value="Made Changes:&#10;- Added Proofreading Template (logic not working)" />
     <MESSAGE value="Made Changes:&#10;- Added Proofreading Template (logic working).&#10;- Created tooltips in image for proofreading." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made Changes:&#10;- Added Proofreading Template (logic working).&#10;- Created tooltips in image for proofreading." />
+    <MESSAGE value="Made Changes:&#10;- Added Proofreading Template (logic working).&#10;- Created tooltips in image for proofreading.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made Changes:&#10;- Added Proofreading Template (logic working).&#10;- Created tooltips in image for proofreading.2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -494,23 +547,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index/static/templatetags/image_data1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index/source/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="147" column="19" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/index/static/templatetags/image_data1.py" />
     <entry file="file://$PROJECT_DIR$/OCR_Django_App/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -520,8 +557,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" column="59" lean-forward="true" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="59" />
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
@@ -530,11 +567,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="316" column="24" lean-forward="true" selection-start-line="316" selection-start-column="24" selection-end-line="316" selection-end-column="24" />
+        <state relative-caret-position="336">
+          <caret line="310" column="23" selection-start-line="310" selection-start-column="23" selection-end-line="310" selection-end-column="23" />
           <folding>
             <element signature="e#573#711#0" />
             <element signature="e#754#883#0" />
+            <element signature="e#1044#1171#0" />
             <element signature="e#1249#2966#0" />
             <element signature="e#3022#3157#0" />
             <element signature="e#3235#4326#0" />
@@ -543,28 +581,44 @@
             <element signature="e#7533#8093#0" />
             <element signature="e#8293#8947#0" />
             <element signature="e#8992#9543#0" />
+            <element signature="e#9574#10552#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index/static/css/split_screen.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="138" column="17" lean-forward="true" selection-start-line="138" selection-start-column="17" selection-end-line="138" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index/templates/index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index/templates/proofread/proofread.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="126" selection-start-line="16" selection-start-column="126" selection-end-line="16" selection-end-column="126" />
+        <state relative-caret-position="306">
+          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/static/css/split_screen.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="121" column="12" selection-start-line="121" selection-start-column="12" selection-end-line="121" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/source/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="97" column="28" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#464#1362#0" />
+            <element signature="e#1536#2221#0" />
+            <element signature="e#2331#2780#0" />
+            <element signature="e#2864#3800#0" />
+            <element signature="e#3884#4255#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/templates/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="55" column="32" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
         </state>
       </provider>
     </entry>

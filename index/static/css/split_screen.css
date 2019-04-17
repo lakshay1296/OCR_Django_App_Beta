@@ -104,6 +104,26 @@
     -webkit-text-fill-color: black;
   }
 
+   .Padding{
+        position: absolute;
+        top: 15%;
+        left: 35%;
+   }
+   .Padding1{
+        position: absolute;
+        top: 25%;
+        left: 35%;
+   }
+   .Padding2{
+        position: absolute;
+        top: 35%;
+        left: 35%;
+   }
+   .Padding3{
+        position: absolute;
+        top: 45%;
+        left: 35%;
+   }
   /*for animated background*/
 
   @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
