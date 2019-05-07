@@ -4,6 +4,8 @@
         <title>Home Page</title>
         {% load static %}
         <link rel = "stylesheet" type = "text/css" href = "{% static 'css/split_screen.css' %}" />
+        <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -21,45 +23,48 @@
                     <li>  </li>
                     <li>  </li>
                     <li>  </li>
-            </ul>
-    <!--<div class="split top area">-->
-        <!--<div id="upper_half">-->
-            
-            <!--<div class="split top left">-->
-                <div class="Padding" id="upper_half_left">
-                    <form action="{% url 'index:home' %}" method="GET">
-                        <button type="submit" value="OCR SCANNER">OCR SCANNER</button>
-                    </form>
-                </div>
-            <!--</div>-->
+    </ul>
 
-            <!--<div class="split top right">-->
-                <div class="Padding1" id="upper_half_right">
-                    <form action="{% url 'index:pdf_home' %}" method="GET">
-                    <button type="submit" value="PDF to PNG Converter">PDF to PNG Converter</button>
-                    </form>
-                </div>
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
+    <div class="Padding" id="upper_half_left">
+        <form action="{% url 'index:home' %}" method="GET">
+            <button type="submit" value="OCR SCANNER">OCR SCANNER</button>
+        </form>
+    </div>
 
-    <!--<div class="split down">-->
-        <!--<div class="split down left">-->
-            <div class="Padding2" id="lower_half_left">
-                <form action="{% url 'index:pdf2pdf_home' %}" method="GET">
-                            <button type="submit" value="PDF2PDF">PDF to PDF</button>
-                </form>
-            </div>
-        <!--</div>-->
+    <div class="Padding1" id="upper_half_right">
+        <form action="{% url 'index:pdf_home' %}" method="GET">
+        <button type="submit" value="PDF to PNG Converter">PDF to PNG Converter</button>
+        </form>
+    </div>
 
-        <!--<div class="split down right">-->
-            <div class="Padding3" id="lower_half_right">
-                <form action="{% url 'index:proofread' %}" method="GET">
-                            <button type="submit" value="Proof">Proofreading</button>
-                </form>
-            </div>
-        <!--</div>-->
-    <!--</div>-->
+    <div class="Padding2" id="lower_half_left">
+        <form action="{% url 'index:pdf2pdf_home' %}" method="GET">
+                    <button type="submit" value="PDF2PDF">PDF to PDF</button>
+        </form>
+    </div>
+
+    <div class="Padding3" id="lower_half_right">
+        <form action="{% url 'index:proofread' %}" method="GET">
+                    <button id="proof" onclick="ShowFunction()" type="submit" value="Proof">Proofreading</button>
+        </form>
+    </div>
+
+    <div class="Padding4" id="lower_half_last">
+            <form action="{% url 'index:txtsim' %}" method="GET">
+                        <button id="proof" onclick="ShowFunction()" type="submit" value="Proof">Text Comparison</button>
+            </form>
+    </div>
+</div>
+<!--Div for LOADER -->
+<div id="loader" class="gooey">
+    <div class="centered">
+        <span class="dot"></span>
+        <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+    </div>
 </body>
 
 </html>

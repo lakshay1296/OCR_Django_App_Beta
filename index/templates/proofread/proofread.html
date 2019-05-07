@@ -5,16 +5,17 @@
     <title>Proofread</title>
 </head>
 <body>
+<h1>Confidence Score: {{ percent }}</h1>
 <div class="tooltip">
 <div id="map">
     {% load static %}
-	<img src="{% static 'images/0681Q00000FqEFYQA3.png' %}"
+	<img src="{% static 'images/0681Q00000FqEFYQA3.pdf-page2.png' %}"
 	alt="Locations Map" usemap="#locations" id="locations-map" /> <map name="locations" id="locations">
 
 <!-- LEFT, TOP, WIDTH, HEIGHT -->
 
 {% for i in result %}
-<area shape="circle" class="tooltip" alt="Proofread tag" coords="{{ i.0 }},{{ i.1 }},20" href="" title="{{ i.3 }}, CONF={{ i.2 }}" />
+<area shape="circle" class="tooltip" alt="Proofread tag" coords="{{ i.0 }},{{ i.1 }},20" href="" title="{{ i.3 }}" />
 {% endfor %}
 </map></div>
 </div>

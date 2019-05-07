@@ -1,11 +1,28 @@
 # -*- coding: utf-8 -*-
+from __future__ import division
 from django.http import HttpResponse
 from django.shortcuts import render
 from .FileName import FileName
 from .source import utils as UT
+from django.views import generic
+from celery import shared_task
+from celery_progress.backend import ProgressRecorder
+from threading import *
 import os
 import re
 import sys
+import time
+import numpy as np
+import csv
+import datetime
+# For Text Similarity
+from gensim.models.keyedvectors import KeyedVectors
+from DocSim import DocSim
+# Importing Queue according to python version
+try:
+    import Queue
+except:
+    import queue as Queue
 
 # Set default encoding to 'UTF-8'
 reload(sys)
@@ -16,6 +33,14 @@ sys.setdefaultencoding('utf-8')
 singleFile = r'[/\\](.*)[/\\].(?:(png))'
 # For checking a valid directory.
 validDirec = r'[A-Za-z]:[/\\](.*)'
+
+''' GLOBAL PATHS: '''
+# Using the pre-trained word2vec model trained using Google news corpus of 3 billion running words.
+googlenews_model_path = "C:\\Users\\Lakshay.s\\Desktop\\document-similarity-master\\data\\GoogleNews-vectors-negative300.bin"
+stopwords_path = "C:\\Users\\Lakshay.s\\Desktop\\document-similarity-master\\data\\stopwords_en.txt"
+
+'''GLOBAL QUEUES'''
+per_sent_queue = Queue.Queue()
 
 # Function for conversion of PDF to searchable PDF
 def pypdfocr(file_path, oldest_path):
@@ -285,6 +310,7 @@ def multi_path_exception_handling(file_path, folder_path):
 
     return output, emptyField
 
+# Handles exceptions in PDF file path.
 def pdf_exception_handling(file_path):
     try:
         output = UT.pdf_to_image(file_path)
@@ -307,11 +333,11 @@ def pdf_exception_handling(file_path):
 
     return output, emptyField
 
-
+# Function for the concept of Proof Reading
 def proofread(request):
     file_name = FileName.objects.all()
 
-    data = UT.tesseract_data("D:\NonOCR\PNG\\0681Q00000FqEFYQA3.pdf\\0681Q00000FqEFYQA3.png")
+    data = UT.tesseract_data("D:\NonOCR\PNG\\0681Q00000FqEFYQA3.pdf\\0681Q00000FqEFYQA3.pdf-page2.png")
 
     image = data[0]
     image_data = data[1]
@@ -336,11 +362,306 @@ def proofread(request):
             newResult.append(i)
 
     # For increasing the top value by 20.
+    conf_list = [] # List of confidence score
     for i in newResult:
         i[1] = (int(i[1]) + 20)
+        # For calculating average confidence score of single page
+        conf_list.append(i[2])
+        
+    # Total number of scores
+    total_score = len(conf_list) * 100
+    
+    # Calculating sum of all scores
+    total_sum = 0
+    for i in conf_list:
+        total_sum = total_sum + i
+        
+    # Calculating the percentage
+    percentage = (total_sum/total_score) * 100
 
+    # Passing thre content to the HTML Page.
     context = {'file_name': file_name,
                'result': newResult,
                'image': image,
+               'percent': ("{0:.2f}".format(percentage)),
                }
     return render(request, "proofread/proofread.html", context)
+
+# Class containing teh code for text comparison
+# class text_similarity(request):
+
+def similarity_calculator(source, target, model):
+
+    with open(stopwords_path, 'r') as fh:
+        stopwords = fh.read().split(",")
+    ds = DocSim(model,stopwords=stopwords)
+
+    source_doc = str(source)
+    target_docs = str(target)
+
+    print "Calculating the similarity score."
+    # Result of similarity (returns score, source doc vector, target doc vectors)
+    result = ds.calculate_similarity(source_doc, target_docs)
+    
+    sim_scores = result[0]
+    # print str(sim_scores)
+    print "Source Doc: " + source_doc + "\n"
+    print "Target Doc: " + target_docs + "\n"
+    
+    if len(sim_scores) != 0:
+        score = sim_scores[0]["score"]
+        print("Similarity Score: " , score)
+        percentage = score * 100
+        print "Percentage: ", str(percentage)
+
+    else:
+        score = 0
+        print("Similarity Score: " , score)
+        percentage = score * 100
+        print "Empty List"
+        
+    return (percentage)
+
+def looper(result, model, src_ind, tar_ind, threshold):
+    count = 0
+    # List for containing similar sentences.
+    tar_sent = []
+    src_sent = []
+
+    for i in result:
+        source= str(i[src_ind])
+        target= str(i[tar_ind])
+
+        per = similarity_calculator(source, target, model)
+        print "Sentence " + str(count) + " is compared. And percentage is " + str(per)
+
+        if per >= threshold:
+            new_tar_str = str(target)
+            new_src_str = str(source)
+            tar_sent.append(new_tar_str)
+            src_sent.append(new_src_str)
+
+    return tar_sent, src_sent
+
+def thread_ripper(source, item, model):
+    
+    for j in source:
+        per = similarity_calculator(j, item, model)
+        per_sent_queue.put([per, str(j), item])
+
+def each_line_checker(model, source, target1, threshold):
+    # List for storing the sentence which will be returned for the output
+    src_sent = []
+    tar_sent = []
+    lis = []
+
+    item = 0
+    while (item<len(target1)):
+        lis.append(target1[item:item+4])
+        item = item + 4
+
+    # Loop for checking 4 sentences at the same time in source document.
+    for i in lis:
+        thread_list = []
+
+        # Threading
+        t1 = Thread(target= thread_ripper, args=(source,i[0], model,))
+        t1.start()
+        thread_list.append(t1)
+
+        try:
+            t2 = Thread(target= thread_ripper, args=(source,i[1], model,))
+            t2.start()
+            thread_list.append(t2)
+        except:
+            pass
+
+        try:
+            t3 = Thread(target= thread_ripper, args=(source,i[2], model,))
+            t3.start()
+            thread_list.append(t3)
+        except:
+            pass
+
+        try:
+            t4 = Thread(target= thread_ripper, args=(source,i[3], model,))
+            t4.start()
+            thread_list.append(t4)
+        except:
+            pass
+
+        # Calculate the percentage and store it in a list
+        # per = similarity_calculator(j, i, model)
+        # per_list.append(per)
+        # sent_list.append(str(j))
+        t1.join()
+        t2.join()
+        t3.join()
+        t4.join()
+
+        # Queue converted to list in form [[per,atr],[percentage,string]]
+        queue_list = list(per_sent_queue.queue)
+        try:
+            # Find out the index of greatest percentage.
+            max_per_index = queue_list.index(max(queue_list))
+
+            # Getting list which contains max percentage
+            max_per_list = queue_list[max_per_index]
+
+            # Final max percentage and corresponding sentence.
+            final_percentage = max_per_list[0]
+            final_src_sentence = max_per_list[1]
+            final_tar_sentence = max_per_list[2]
+        except Exception:
+            final_percentage = 0
+            final_src_sentence = ""
+            final_tar_sentence = ""
+
+        if final_percentage > threshold:
+            src_sent.append(final_src_sentence)
+            tar_sent.append(final_tar_sentence)
+
+    return tar_sent, src_sent
+
+def main_function(request, source_file_name="", target_file_name="", threshold=0):
+
+    timer = []
+
+    # Start time of function
+    start_time = datetime.datetime.now()
+    timer.append(start_time)
+
+    #Open files for checking similarities
+    source_file_name = "C:\\Users\\Lakshay.s\\Desktop\\document-similarity-master\\docs\\77849-AFS(Fully-Executed_Contract)[t1_v1].txt"
+    target_file_name = "C:\\Users\Lakshay.s\\Desktop\\document-similarity-master\\docs\\06836000003k8erAAA.txt"
+    csv_file_name ="C:\\Users\Lakshay.s\\Desktop\\document-similarity-master\\Output\\List_Cmp.csv"
+    file1 = open(source_file_name, "r+")
+    file2 = open(target_file_name, "r+")
+    file3 = open(csv_file_name, "w+")
+
+    # Getting file names
+    src_name_lis = source_file_name.split("\\")
+    src_name = src_name_lis[len(src_name_lis)-1]
+
+    tar_name_lis = target_file_name.split("\\")
+    tar_name = tar_name_lis[len(tar_name_lis)-1]
+
+    # Threshold value for testing purpose
+    threshold = 60
+
+    # Writer for CSV file
+    w = csv.writer(file3, quoting=csv.QUOTE_ALL, delimiter=',')
+    w.writerow(['Target', "Out_Str_Lis"])
+
+    # Read the contents
+    source = file1.read().split(". ")
+    print "No. of sentences in source doc: ", str(len(source))
+    target = file2.read().split(". ")
+    print "No. of sentences in target doc: ", str(len(target))
+
+    # Length of list of doc sentences.
+    src_len = len(source)
+    tar_len = len(target)
+
+    if src_len < tar_len:
+        X = [source, target]
+        src_ind = 0
+        tar_ind = 1
+        greater = target
+        smaller = source
+        
+    elif tar_len < src_len:
+        X = [target, source]
+        src_ind = 1
+        tar_ind = 0
+        greater = source
+        smaller = target
+        
+    else:
+        X = [source, target]
+        src_ind = 0
+        tar_ind = 1
+        greater = source
+        smaller = target
+
+    # Result of transpose matrix
+    result = [[X[j][i] for j in range(len(X))] for i in range(0, len(X[0]))]
+
+    # Model
+    model = KeyedVectors.load_word2vec_format(googlenews_model_path, binary=True)
+
+    # Function for processing the similarity.
+    # out_str_lis = looper(result, model, src_ind, tar_ind, threshold)
+
+    out_str_lis = each_line_checker(model, greater, smaller, threshold)
+
+    # Lists containing similar strings
+    target_list = out_str_lis[0]
+    source_list = out_str_lis[1]
+    
+    # Closing all the files.
+    file1.close()
+    file2.close()
+    file3.close()
+
+    source_file = open(source_file_name, "r+")
+
+    context = {
+        "source": source,
+        "target": target,
+        "target_list": target_list,
+        "source_list": source_list,
+        "src_name": src_name,
+        "tar_name": tar_name,
+    }
+
+    # End Time
+    end_time = datetime.datetime.now()
+    timer.append(end_time)
+
+    # # Length of lists
+    # out_str_len = len(out_str_lis)
+    # tar_len = len(target)
+
+    # # Conditions for checking the smaller length list and appending blanks to it
+    # if out_str_len < tar_len:
+    #     diff = tar_len - out_str_len
+    #     for i in range(diff):
+    #         out_str_lis.append("")
+        
+    # elif tar_len < out_str_len:
+    #     diff = out_str_len - tar_len
+    #     for i in range(diff):
+    #         target.append("")
+
+    # else:
+    #     pass
+
+    # # List for containing the lists which we need to obtain in output
+    # csv_write = [target, out_str_lis]
+
+    # # Transpose Matrix
+    # result1 = [[csv_write[j][i] for j in range(len(csv_write))] for i in range(0, len(csv_write[0]))]
+
+    # for i in result1:
+    #     w.writerow([i[0], i[1]])
+
+    print "Task Completed"
+    print "Start Time: " + str(timer[0])
+    print "End Time: " + str(timer[1])
+
+    return render(request, "text_sim/txt_sim.html", context)
+
+class progress_view(generic.View):
+    template_name = "progressbar/display_progress.html"
+
+    def printer_func(self, request):
+        var = "Hello World"
+
+        context = {
+            'var': var,
+        }
+
+        return render(request, template_name, context)
+
+    # def main_function():

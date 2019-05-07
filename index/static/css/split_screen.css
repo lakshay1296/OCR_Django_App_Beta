@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Barrio|Montserrat:700');
 
+mark { 
+  background-color: yellow;
+  color: black;
+}
+
+.wrap{
+  word-wrap: break-word;
+}
+
 .centered {
     position: absolute;
   top: 50%;
@@ -18,13 +27,13 @@
   .top {
     top: 0;
     width: 50%;
-    height: 50%;
+    height: 90%;
   }
 
   .down {
     bottom: 0;
-    height: 50%;
-    width: 50%;
+    height: 20%;
+    width: 100%;
   }
 
   .left {
@@ -124,6 +133,12 @@
         top: 45%;
         left: 35%;
    }
+
+   .Padding4{
+    position: absolute;
+    top: 55%;
+    left: 35%;
+}
   /*for animated background*/
 
   @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
@@ -135,6 +150,8 @@
 
 body{
     font-family: 'Exo', sans-serif;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -153,12 +170,10 @@ body{
 
 
 .area{
-    background: #f;
+    background: #fff;
     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
     width: 100%;
     height:100vh;
-
-
 }
 
 .circles{
@@ -274,4 +289,89 @@ body{
         border-radius: 50%;
     }
 
+}
+
+/* Loader CSS */
+
+.gooey {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: contrast(20);
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+.gooey .dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 12px;
+  left: 15px;
+  filter: blur(4px);
+  background: #fff;
+  border-radius: 50%;
+  transform: translateX(0);
+  animation: dot 2.8s infinite;
+}
+.gooey .dots {
+  transform: translateX(0);
+  margin-top: 12px;
+  margin-left: 31px;
+  animation: dots 2.8s infinite;
+}
+.gooey .dots span {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  filter: blur(4px);
+  background: #fff;
+  border-radius: 50%;
+}
+@-moz-keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+}
+@-webkit-keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+}
+@-o-keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+}
+@keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+}
+@-moz-keyframes dots {
+  50% {
+    transform: translateX(-31px);
+  }
+}
+@-webkit-keyframes dots {
+  50% {
+    transform: translateX(-31px);
+  }
+}
+@-o-keyframes dots {
+  50% {
+    transform: translateX(-31px);
+  }
+}
+@keyframes dots {
+  50% {
+    transform: translateX(-31px);
+  }
 }

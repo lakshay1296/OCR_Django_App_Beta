@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head> <title>Text Similarity</title> 
+    {% load static %}
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'css/style.css' %}" />
+</head>
+<body>
+    <!-- For inserting elements in upper container -->
+    <div class="upper_element">
+        <h3>Text Comparison</h3>
+    </div>
+
+    <!-- This is the container for mid functionality area -->
+    <div class="container_div">
+        <div class="div_custom area_left wrap">
+            <div class="area_left left_file_cont">
+                <h4>Source Doc: {{ src_name }}</h4>
+            </div>
+            {% for i in source %}
+            {% if i in source_list %}
+            {{ i }}.
+            {% else %}
+            <b><mark class="mark1">{{ i }}. </b></mark>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="div_custom area_right wrap">
+            <div class="area_right left_file_cont">
+                <h4>Target Doc: {{ tar_name }}</h4>
+            </div>
+            {% for i in target %}
+            {% if i in target_list %}
+            {{ i }}.
+            {% else %}
+            <b><mark>{{ i }}. </b></mark>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- For inserting elements in lower container -->
+    <div class="lower_container">
+
+    </div>
+</body>
+</html>

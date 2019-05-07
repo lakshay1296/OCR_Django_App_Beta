@@ -11,7 +11,7 @@ urlpatterns = [
     url(r'^home/$', views.home, name='home'),
 
     # url: /index1/123/
-    url(r'^(?P<album_id>[0-9]+)/$', views.details, name='details'),
+    # url(r'^(?P<album_id>[0-9]+)/$', views.details, name='details'),
 
     # url: /index1/file_path
     url(r'^home/ocr_file_path/$', views.ocr_file_path, name='ocr_file_path'),
@@ -29,6 +29,12 @@ urlpatterns = [
     url(r'^pdf2pdf_home/pdf2pdf_file_path/$', views.pdf2pdf_file_path, name='pdf2pdf_file_path'),
 
     # url: /index1/file_path
-    url(r'^proofread/$', views.proofread, name='proofread')
+    url(r'^proofread/$', views.proofread, name='proofread'),
+
+    # url: /index1/file_path
+    url(r'^txtsim/$', views.main_function, name='txtsim'),
+
+    # for ProgressBar
+    url(r'^progress/$', views.progress_view.as_view(), name='task_status'),
 
 ]
