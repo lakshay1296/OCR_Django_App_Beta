@@ -9,3 +9,5 @@ It's a beta app, there are many elements on which work is still going on. Howeve
 2. Performing OCR on PNG, then writing the changes to text file.
 
 3. Creating a searchable PDF from a non-ocr PDF.
+
+4. Text similarity and dissimilarity
