@@ -36,18 +36,18 @@ validDirec = r'[A-Za-z]:[/\\](.*)'
 
 ''' GLOBAL PATHS: '''
 # Using the pre-trained word2vec model trained using Google news corpus of 3 billion running words.
-googlenews_model_path = "C:\\Users\\Lakshay.s\\Desktop\\document-similarity-master\\data\\GoogleNews-vectors-negative300.bin"
-stopwords_path = "C:\\Users\\Lakshay.s\\Desktop\\document-similarity-master\\data\\stopwords_en.txt"
+googlenews_model_path = "C:\\Users\\lakshay.s\\Desktop\\document-similarity-master\\data\\GoogleNews-vectors-negative300.bin"
+stopwords_path = "C:\\Users\\lakshay.s\\Desktop\\document-similarity-master\\data\\stopwords_en.txt"
 
 '''GLOBAL QUEUES'''
 per_sent_queue = Queue.Queue()
 
-# Function for conversion of PDF to searchable PDF
-def pypdfocr(file_path, oldest_path):
-    os.system("python pypdfocr.py " + file_path)
-    os.rename(file_path, oldest_path)
-    emptyField = "Fully Executed"
-    return emptyField
+'''GLOBAL LISTS'''
+total_file_listing = []
+processed_file_list = []
+full_path_list = []
+files_to_be_processed = []
+four_file_group = []
 
 # Main Home Page
 def index(request):
@@ -167,6 +167,13 @@ def pdf2pdf_home(request):
     context = {'file_name': file_name}
     return render(request, "pdf2pdf/pdf2pdf_home.html", context)
 
+# Function for conversion of PDF to searchable PDF
+def pypdfocr(file_path, oldest_path):
+    os.system("python pypdfocr.py " + file_path)
+    os.rename(file_path, oldest_path)
+    emptyField = "Fully Executed"
+    return emptyField
+
 # Exception handing for logic of PDF2PDF Converter
 def pdf2pdf_exception_handling(file_path, oldest_path):
     try:
@@ -189,6 +196,104 @@ def pdf2pdf_exception_handling(file_path, oldest_path):
             output = e
 
     return output, emptyField
+
+def pdf2pdf_process(path):
+    
+    path_split = str(path).split("\\")
+    old_file_name = path_split[len(path_split)-1]
+    oldest_path = path
+
+    if "-" in old_file_name:
+        newFile = old_file_name.split("-")
+        file_name = newFile[0] + ".pdf"
+
+    else:
+        file_name = old_file_name
+
+    old_path = path
+    new_path = str(path).replace(old_file_name, file_name)
+    os.rename(old_path, new_path)
+    print (old_file_name)
+    print ("python pypdfocr.py " + new_path)
+    os.system("python pypdfocr.py " + new_path)
+    os.rename(new_path, oldest_path)
+
+def pdf2pdf_threading(path):
+
+    count = 0
+
+    f = open("D:\\File_list.csv")
+    reader = csv.DictReader(f)
+
+    for row in reader:
+        processed_file_list.append(str(row["Path"]))
+
+    # Getting all the file list available in given path
+    for root, dir, files in os.walk(path):
+        for singFile in files:
+
+            if str(singFile).endswith(".pdf"):
+                total_file_listing.append(singFile)
+
+                full_path = root + "\\" + singFile
+
+                if "/" in full_path:
+                    full_path.replace("/", "\\")
+                else:
+                    pass
+
+                full_path_list.append(full_path)
+
+    # Checking if file is already processed or not
+    for i in total_file_listing:
+        if i not in processed_file_list:
+            index = total_file_listing.index(i)
+            element = full_path_list[index]
+
+            # Appending to list in which contains files to be processed.
+            files_to_be_processed.append(element)
+
+    # Creating Groups
+    item = 0
+    while item < len(files_to_be_processed):
+        four_file_group.append(files_to_be_processed[item:(item+4)])
+        item = item + 4
+
+    # Creating 4 threads per 4 files
+    for group in four_file_group:
+        count = count + 4
+
+        # Threading starts
+        t1 = Thread(target=pdf2pdf_process, args=(group[0],))
+        t1.start()
+        try:
+            t2 = Thread(target=pdf2pdf_process, args=(group[1],))
+            t2.start()
+        except:
+            pass
+
+        try:
+            t3 = Thread(target=pdf2pdf_process, args=(group[2],))
+            t3.start()
+        except:
+            pass
+
+        try:
+            t4 = Thread(target=pdf2pdf_process, args=(group[3],))
+            t4.start()
+        except:
+            pass
+
+        # Wait for threads to complete
+        t1.join()
+        t2.join()
+        t3.join()
+        t4.join()
+
+        print (str(count) + ":" + " files has been OCR'd")
+    emptyField = "Fully Executed"
+    output = "Don't Know"
+    return emptyField, output
 
 # Performs all the logic for conversion of PDF to searchable PDF
 
@@ -225,28 +330,31 @@ def pdf2pdf_file_path(request):
 
     elif (str(file_path).endswith("\\")) or (str(file_path).endswith("/")):
         # For multiple PDF files
-        for root, dir, files in os.walk(file_path):
-            for singFile in files:
-                if str(singFile).endswith(".pdf"):
+        # for root, dir, files in os.walk(file_path):
+        #     for singFile in files:
+        #         if str(singFile).endswith(".pdf"):
 
-                    old_file = singFile
-                    oldest_path = root + "\\" + old_file
+        #             old_file = singFile
+        #             oldest_path = root + "\\" + old_file
 
-                    if "-" in singFile:
-                        newFile = singFile.split("-")
-                        file_name = newFile[0] + ".pdf"
+        #             if "-" in singFile:
+        #                 newFile = singFile.split("-")
+        #                 file_name = newFile[0] + ".pdf"
 
-                    else:
-                        file_name = singFile
+        #             else:
+        #                 file_name = singFile
 
-                    old_path = root + "\\" + singFile
-                    new_path = root + "\\" + file_name
-                    os.rename(old_path, new_path)
-                    print singFile
-                    process = pdf2pdf_exception_handling(new_path, oldest_path)
+        #             old_path = root + "\\" + singFile
+        #             new_path = root + "\\" + file_name
+        #             os.rename(old_path, new_path)
+        #             print singFile
+        #             process = pdf2pdf_exception_handling(new_path, oldest_path)
 
-                    output = process[0]
-                    emptyField = process[1]
+        #             output = process[0]
+        #             emptyField = process[1]
+        out = pdf2pdf_threading(file_path)
+        output = out[0]
+        emptyField = out[1]
 
     else:
         output = "Not Valid Path"
@@ -455,71 +563,73 @@ def each_line_checker(model, source, target1, threshold):
     tar_sent = []
     lis = []
 
-    item = 0
-    while (item<len(target1)):
-        lis.append(target1[item:item+4])
-        item = item + 4
+    # item = 0
+    # while (item<len(target1)):
+    #     lis.append(target1[item:item+4])
+    #     item = item + 4
 
-    # Loop for checking 4 sentences at the same time in source document.
-    for i in lis:
-        thread_list = []
+    # # Loop for checking 4 sentences at the same time in source document.
+    # for i in lis:
+    #     thread_list = []
 
-        # Threading
-        t1 = Thread(target= thread_ripper, args=(source,i[0], model,))
-        t1.start()
-        thread_list.append(t1)
+    #     # Threading
+    #     t1 = Thread(target= thread_ripper, args=(source,i[0], model,))
+    #     t1.start()
+    #     thread_list.append(t1)
 
-        try:
-            t2 = Thread(target= thread_ripper, args=(source,i[1], model,))
-            t2.start()
-            thread_list.append(t2)
-        except:
-            pass
+    #     try:
+    #         t2 = Thread(target= thread_ripper, args=(source,i[1], model,))
+    #         t2.start()
+    #         thread_list.append(t2)
+    #     except:
+    #         pass
 
-        try:
-            t3 = Thread(target= thread_ripper, args=(source,i[2], model,))
-            t3.start()
-            thread_list.append(t3)
-        except:
-            pass
+    #     try:
+    #         t3 = Thread(target= thread_ripper, args=(source,i[2], model,))
+    #         t3.start()
+    #         thread_list.append(t3)
+    #     except:
+    #         pass
 
-        try:
-            t4 = Thread(target= thread_ripper, args=(source,i[3], model,))
-            t4.start()
-            thread_list.append(t4)
-        except:
-            pass
+    #     try:
+    #         t4 = Thread(target= thread_ripper, args=(source,i[3], model,))
+    #         t4.start()
+    #         thread_list.append(t4)
+    #     except:
+    #         pass
 
-        # Calculate the percentage and store it in a list
-        # per = similarity_calculator(j, i, model)
-        # per_list.append(per)
-        # sent_list.append(str(j))
-        t1.join()
-        t2.join()
-        t3.join()
-        t4.join()
+    #     t1.join()
+    #     t2.join()
+    #     t3.join()
+    #     t4.join()
 
-        # Queue converted to list in form [[per,atr],[percentage,string]]
-        queue_list = list(per_sent_queue.queue)
-        try:
-            # Find out the index of greatest percentage.
-            max_per_index = queue_list.index(max(queue_list))
+    '''Calculate the percentage and store it in a list'''
+    for i in target1:
+        for j in source:
+            per = similarity_calculator(j, i, model)
+            per_sent_queue.put([per, str(j), i])
 
-            # Getting list which contains max percentage
-            max_per_list = queue_list[max_per_index]
+            # Queue converted to list in form [[per,atr],[percentage,string]]
+            queue_list = list(per_sent_queue.queue)
+            try:
+                # Find out the index of greatest percentage.
+                max_per_index = queue_list.index(max(queue_list))
 
-            # Final max percentage and corresponding sentence.
-            final_percentage = max_per_list[0]
-            final_src_sentence = max_per_list[1]
-            final_tar_sentence = max_per_list[2]
-        except Exception:
-            final_percentage = 0
-            final_src_sentence = ""
-            final_tar_sentence = ""
+                # Getting list which contains max percentage
+                max_per_list = queue_list[max_per_index]
 
-        if final_percentage > threshold:
-            src_sent.append(final_src_sentence)
-            tar_sent.append(final_tar_sentence)
+                # Final max percentage and corresponding sentence.
+                final_percentage = max_per_list[0]
+                final_src_sentence = max_per_list[1]
+                final_tar_sentence = max_per_list[2]
+            except Exception:
+                final_percentage = 0
+                final_src_sentence = ""
+                final_tar_sentence = ""
+
+            if final_percentage > threshold:
+                src_sent.append(final_src_sentence)
+                tar_sent.append(final_tar_sentence)
 
     return tar_sent, src_sent
 
